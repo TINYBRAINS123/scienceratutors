@@ -6,29 +6,37 @@
   <title>Thank You</title>
   <style>
     body {
-      margin: 0;
+      font-family: 'Poppins', sans-serif;
       background-color: #f8fafc;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      font-family: 'Poppins', sans-serif;
       text-align: center;
       color: #333;
+      margin: 0;
+      padding: 20px;
     }
-    img {
-      max-width: 90%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: #ff7e1f;
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid #ff7e1f;
     }
   </style>
 </head>
 <body>
-  <div>
-    <img src="thankyou.png" alt="Thank You" />
-    <h1>Thank you for subscribing!</h1>
-    <p>We’ll keep you updated with new classes and offers.</p>
-  </div>
+  <h1>Thank you for subscribing!</h1>
+  <p>We’ll keep you updated with new classes and offers.</p>
+  <a href="/">Back to Home</a>
 </body>
 </html>
