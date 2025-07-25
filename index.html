@@ -589,6 +589,26 @@
             </button>
           </div>
         </form>
+	  <!-- Add this script right here or at the end of your HTML file -->
+  <script>
+    const form = document.querySelector('form[action^="https://script.google.com"]');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault(); // prevent form's default submit behavior
+      
+      const formData = new FormData(form);
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      }).then(() => {
+        alert('Thank you for subscribing! We will keep you updated.');
+        form.reset();
+      }).catch(() => {
+        alert('Oops! Something went wrong. Please try again later.');
+      });
+    });
+  </script>
         <p class="text-gray-500 text-sm">By subscribing, you agree to our Privacy Policy.</p>
       </div>
     </div>
